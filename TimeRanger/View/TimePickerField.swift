@@ -17,7 +17,7 @@ struct TimePickerField: View {
             Text(title)
                 .font(.headline)
             
-            // Button to show the picker
+            // ピッカーを表示するボタン
             Button(action: {
                 isPickerPresented = true
             }) {
@@ -46,7 +46,7 @@ struct TimePickerField: View {
                     .labelsHidden()
                     .pickerStyle(WheelPickerStyle())
                     
-                    // Button to dismiss the picker
+                    // ピッカーを解除するボタン
                     Button("Done") {
                         isPickerPresented = false
                     }
