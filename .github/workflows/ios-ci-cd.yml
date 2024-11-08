@@ -22,7 +22,7 @@ jobs:
       - name: Build and Test
         run: |
           xcodebuild clean test \
-          -workspace TimeRanger.xcodeproj \
+          -project TimeRanger.xcodeproj \
           -scheme TimeRanger \
           -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0' \
           CODE_SIGNING_ALLOWED=NO
