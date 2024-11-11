@@ -1,0 +1,18 @@
+# Fastfile
+default_platform(:ios)
+
+platform :ios do
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    build_app(
+      project: TimeRanger.xcodeproj
+      scheme: TimeRanger
+    )
+    
+    upload_to_testflight(
+      api_key: {
+        key_id: ENV["3UP7YZ86WT"],
+        issuer_id: ENV["b664568c-0c02-4271-ad15-f0497116c07a"],
+        key: ENV[“——BEGIN PRIVATE KEY----- MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgn/F0PBty5zmd0tcB EbONvQ6fdsRVJlXkJGFpFZjN72mgCgYIKoZIzj0DAQehRANCAAQPuZCR3dvRe/fl TkriVpVOWH5WPo0+Pbz7tXrJ0IxyPv15+xABFQgyS8UBdfysQc2FcneddiLJYmjI qwZZkuip -----END PRIVATE KEY——“]
+  end
+end
