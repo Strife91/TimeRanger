@@ -15,22 +15,14 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Boot Simulator
-        run: |
-          xcrun simctl boot "iPhone 15" || true
-          sleep 30
-
-      - name: Clean Derived Data
-        run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
+        uses: actions/checkout@v4
 
       - name: Build and Test
         run: |
           xcodebuild clean test \
           -project TimeRanger.xcodeproj \
           -scheme TimeRanger \
-          -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.0' \
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0' \
           CODE_SIGNING_ALLOWED=NO
 
       - name: Install Fastlane
