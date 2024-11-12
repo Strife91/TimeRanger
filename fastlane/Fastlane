@@ -1,5 +1,13 @@
 # Fastfile
 
+lane :upload do
+  # Debugging: Print the environment variables to ensure they are being loaded
+  puts "Key ID: #{ENV['APP_STORE_CONNECT_KEY_ID']}"
+  puts "Issuer ID: #{ENV['APP_STORE_CONNECT_ISSUER_ID']}"
+  puts "Key Content: #{ENV['APP_STORE_CONNECT_API_KEY']}"
+
+  # Define the App Store Connect API key hash
+
 # Load the API key from GitHub Secrets
 app_store_connect_api_key = {
   key_id: ENV['APP_STORE_CONNECT_KEY_ID'],
