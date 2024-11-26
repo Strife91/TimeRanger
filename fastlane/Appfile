@@ -1,8 +1,8 @@
-app_identifier("se.gattanjo.nilsson.TimeRanger") # The bundle identifier of your app
-apple_id("gattanjo.nilsson@extrapreneur.se") # Your Apple Developer Portal username
+app_identifier("se.gattanjo.nilsson.TimeRangerApp") # The bundle identifier of your app
+apple_id("gattanjo.nilsson@hotmail.com") # Your Apple Developer Portal username
 
-itc_team_id("126653849") # App Store Connect Team ID
-team_id("2U862QGW53") # Developer Portal Team ID
+itc_team_id("127469577") # App Store Connect Team ID
+team_id("B75G6G9C4G") # Developer Portal Team ID
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile
