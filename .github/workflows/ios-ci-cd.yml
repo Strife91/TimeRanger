@@ -21,7 +21,7 @@ jobs:
         run: |
           xcodebuild clean test \
           -project TimeRanger.xcodeproj \
-          -scheme TimeRangerApp \
+          -scheme TimeRanger \
           -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0' \
           CODE_SIGNING_ALLOWED=NO
 
